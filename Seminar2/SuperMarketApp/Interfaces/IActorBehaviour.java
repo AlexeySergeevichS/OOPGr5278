@@ -11,6 +11,9 @@ public interface IActorBehaviour {
 
     public void setMakeOrder(boolean val);
 
+    /**
+     * @return Является ли участником акции
+     */
     public boolean isPromo();
     public Actor getActor();
 
