@@ -26,7 +26,7 @@ private static int generalId;
 
     @Override
     public int compareTo(Student o) {
-        System.out.println(super.getName() + "<>" +o.getName());
+//        System.out.println(super.getName() + "<>" +o.getName());
         if (o.getAge() > super.getAge()){
             return -1;
         }
