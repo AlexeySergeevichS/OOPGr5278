@@ -1,7 +1,7 @@
-public class Student<T ,V extends Comparable<V>> extends Person<T,V> implements Comparable<Student<T,V>> {
+public class StudentG<T ,V extends Comparable<V>> extends PersonG<T,V> implements Comparable<StudentG<T,V>> {
     private T id;
 //private static int generalId;
-    public Student(V name, T age) {
+    public StudentG(V name, T age) {
         super(name, age);
 //        this.id = generalId;
 //        generalId++;
@@ -23,7 +23,7 @@ public class Student<T ,V extends Comparable<V>> extends Person<T,V> implements 
     }
 
     @Override
-    public int compareTo(Student<T,V> o) {
+    public int compareTo(StudentG<T,V> o) {
         return super.getName().compareTo(o.getName());
 //        System.out.println(super.getName() + "<>" +o.getName());
 //        if (o.getAge() > super.getAge()){

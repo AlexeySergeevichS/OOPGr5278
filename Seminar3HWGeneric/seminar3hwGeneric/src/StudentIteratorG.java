@@ -1,11 +1,11 @@
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentIterator<T ,V extends Comparable<V>> implements Iterator<Student<T,V>> {
+public class StudentIteratorG<T ,V extends Comparable<V>> implements Iterator<StudentG<T,V>> {
 private int count;
-private List<Student<T,V>> list;
+private List<StudentG<T,V>> list;
 
-    public StudentIterator(List<Student<T,V>> list) {
+    public StudentIteratorG(List<StudentG<T,V>> list) {
         this.list = list;
     }
 
@@ -17,7 +17,7 @@ private List<Student<T,V>> list;
     }
 
     @Override
-    public Student<T,V> next() {
+    public StudentG<T,V> next() {
         return list.get(count++);
     }
 }

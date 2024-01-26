@@ -1,25 +1,27 @@
-public abstract class PersonG<T, V> {
-    private T age;
-    private V name;
+package Model.Domain;
 
-    public PersonG(V name, T age) {
+public abstract class Person {
+    private int age;
+    private String name;
+
+    public Person(String name,int age) {
         this.age = age;
         this.name = name;
     }
 
-    public T getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(T age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public V getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(V name) {
+    public void setName(String name) {
         this.name = name;
     }
 

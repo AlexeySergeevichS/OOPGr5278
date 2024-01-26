@@ -1,22 +1,22 @@
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGroup<T  extends Comparable<T>,V extends Comparable<V>> implements Iterable<Student<T,V>>, Comparable<StudentGroup <T ,V > > {
-    private List<Student<T,V>> list;
+public class StudentGroupG<T  extends Comparable<T>,V extends Comparable<V>> implements Iterable<StudentG<T,V>>, Comparable<StudentGroupG<T ,V >> {
+    private List<StudentG<T,V>> list;
     private T id;
 //    private static int generalId;
 
-    public StudentGroup(List<Student<T,V>> list,T id) {
+    public StudentGroupG(List<StudentG<T,V>> list, T id) {
         this.list = list;
         this.id = id;
 //        this.id = ++generalId;
     }
 
-    public List<Student<T,V>> getList() {
+    public List<StudentG<T,V>> getList() {
         return list;
     }
 
-    public void setList(List<Student<T,V>> list) {
+    public void setList(List<StudentG<T,V>> list) {
         this.list = list;
     }
 
@@ -33,7 +33,7 @@ public class StudentGroup<T  extends Comparable<T>,V extends Comparable<V>> impl
      */
     private String studentsList(){
         String retS = "";
-        for (Student<T,V> s :this.list){
+        for (StudentG<T,V> s :this.list){
             retS += s.getName() + ", ";
         }
         return retS.substring(0, retS.length() - 2);
@@ -46,12 +46,12 @@ public class StudentGroup<T  extends Comparable<T>,V extends Comparable<V>> impl
     }
 
     @Override
-    public Iterator<Student<T,V>> iterator() {
-        return new StudentIterator<T,V>(list);
+    public Iterator<StudentG<T,V>> iterator() {
+        return new StudentIteratorG<T,V>(list);
     }
 
     @Override
-    public int compareTo(StudentGroup<T,V> o) {
+    public int compareTo(StudentGroupG<T,V> o) {
         if (o.getList().size() > this.list.size()  ){
             return -1;
         }
